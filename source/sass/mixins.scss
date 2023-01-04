@@ -1,0 +1,102 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+//Mixin подставляет формат webp для background.jpg
+@mixin background-image($filename, $ext: "jpg") {
+  @supports (background-image: url("../img/#{$filename}.webp")) {
+    background-image: url("../img/#{$filename}.webp");
+
+    @include vp-1023 {
+      background-image: url("../img/#{$filename}-tablet.webp");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/#{$filename}-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/#{$filename}@2x.webp");
+
+      @include vp-1023 {
+        background-image: url("../img/#{$filename}-tablet@2x.webp");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/#{$filename}-mobile@2x.webp");
+      }
+    }
+  }
+
+  @supports not (background-image: url("../img/#{$filename}.webp")) {
+    background-image: url("../img/#{$filename}.#{$ext}");
+
+    @include retina {
+      background-image: url("../img/#{$filename}@2x.#{$ext}");
+    }
+  }
+}
+
+//text-gradient
+@mixin gradient-text {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    127.61deg,
+    $color-crimson 0%,
+    $color-cobalt 87.33%
+  );
+  background-clip: text;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+// Desktop first
+
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

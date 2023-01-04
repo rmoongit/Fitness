@@ -1,0 +1,32 @@
+.btn {
+  display: inline-flex;
+  padding: 24px 42px;
+  justify-content: center;
+  word-break: break-word;
+
+  color: $color-default-white;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  transition: opacity $trans-default;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &--slider {
+    padding: 0;
+    color: $color-dark-grey;
+    outline-offset: 3px;
+    outline-color: $color-sapphire;
+  }
+}

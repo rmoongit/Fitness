@@ -1,0 +1,188 @@
+.games {
+  margin-bottom: 107px;
+  min-height: 500px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+    min-height: 292px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 66px;
+    min-height: 584px;
+  }
+}
+
+.games__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include vp-767 {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+
+.games__content {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 85px 77px 85px;
+  background-color: $color-red;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 51px 38px 50px 45px;
+    width: 292px;
+  }
+
+  @include vp-767 {
+    padding: 51px 37px 51px 41px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    display: block;
+    border: 4px solid $color-default-white;
+    padding: 25px 40px;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    @include vp-1199 {
+      width: 97%;
+      border-width: 2px;
+      padding: 12px 50px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
+.games__text {
+  margin: 0;
+  margin-bottom: 46px;
+  font-size: 18px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-left: 3px;
+  }
+}
+
+.games__date {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  h4 {
+    font-family: $ff-alumni;
+    font-weight: 600;
+    margin: 0;
+    padding-left: 11px;
+    letter-spacing: 0.03em;
+    font-size: 82px;
+    line-height: 79px;
+    text-align: center;
+
+    @include vp-1199 {
+      font-size: 48px;
+      line-height: 46px;
+      padding-left: 7px;
+    }
+
+    @include vp-767 {
+      padding-left: 8px;
+    }
+  }
+}
+
+.games__time-inner {
+  margin-top: -6px;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+
+    @include vp-1199 {
+      font-size: 12px;
+    }
+  }
+
+  span {
+    margin: 9px 0 0 5px;
+    display: inline-block;
+    vertical-align: baseline;
+    font-weight: 400;
+    font-size: 14px;
+    width: 50px;
+
+    @include vp-1199 {
+      margin: 3px 0 0 3px;
+      font-size: 10px;
+      width: 47px;
+    }
+
+    @include vp-767 {
+      margin: 3px 0 0 3px;
+    }
+  }
+
+  .games__time {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 9px;
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 94%;
+      height: 1px;
+      background-color: $color-default-white;
+      left: 0;
+      top: 6px;
+
+      @include vp-1199 {
+        top: 2px;
+        width: 89%;
+      }
+    }
+
+    &--line::before {
+      width: 62px;
+
+      @include vp-1199 {
+        width: 41px;
+      }
+    }
+
+    @include vp-1199 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.games__picture {
+  margin: 0;
+
+  @include vp-767 {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
