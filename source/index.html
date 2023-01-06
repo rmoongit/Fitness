@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -231,20 +231,20 @@
         <section class="subscription" id="tickets">
           <h3>Абонементы</h3>
           <div class="subscription__wrapper container tabs">
-            <div class="tabs__buttons">
-              <button data-tab="#tab_1" type="button" aria-label="один месяц">
+            <div class="tabs__buttons no-js">
+              <button data-tab="1" type="button" aria-label="один месяц">
                 1 месяц
               </button>
-              <button data-tab="#tab_2" type="button" aria-label="6 месяцев">
+              <button data-tab="2" type="button" aria-label="6 месяцев">
                 6 месяцев
               </button>
-              <button data-tab="#tab_3" type="button" aria-label="12 месяцев">
+              <button data-tab="3" type="button" aria-label="12 месяцев">
                 12 месяцев
               </button>
             </div>
 
             <div class="subscription__content">
-              <div class="subscription__content-wrapper" id="tab_1">
+              <div class="subscription__content-wrapper" data-list="1">
                 <ul class="subscription__list">
                   <li class="subscription__item">
                     <h4>С тренером</h4>
@@ -269,59 +269,58 @@
                   </li>
                 </ul>
               </div>
-              <!-- ДОДЕЛАТЬ ДЕСКТОП -->
 
-              <!-- <div class="subscription__content-wrapper" id="tab_2">
+              <div class="subscription__content-wrapper" data-list="2">
                 <ul class="subscription__list">
                   <li class="subscription__item">
                     <h4>С тренером</h4>
                     <p>12 занятий</p>
-                    <span class="subscription__min-text">5000</span>
-                    <span class="subscription__max-text">5000</span>
+                    <span class="subscription__min-text">7000</span>
+                    <span class="subscription__max-text">7000</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
                   <li class="subscription__item">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
-                    <span class="subscription__min-text">1700</span>
-                    <span class="subscription__max-text">1700</span>
+                    <span class="subscription__min-text">2700</span>
+                    <span class="subscription__max-text">2700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
                   <li class="subscription__item">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
-                    <span class="subscription__min-text">2700</span>
-                    <span class="subscription__max-text">2700</span>
+                    <span class="subscription__min-text">3700</span>
+                    <span class="subscription__max-text">3700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
                 </ul>
-              </div> -->
+              </div>
 
-              <!-- <div class="subscription__content-wrapper" id="tab_3">
+              <div class="subscription__content-wrapper" data-list="3">
                 <ul class="subscription__list">
                   <li class="subscription__item">
                     <h4>С тренером</h4>
                     <p>12 занятий</p>
-                    <span class="subscription__min-text">5000</span>
-                    <span class="subscription__max-text">5000</span>
+                    <span class="subscription__min-text">9000</span>
+                    <span class="subscription__max-text">9000</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
                   <li class="subscription__item">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
-                    <span class="subscription__min-text">1700</span>
-                    <span class="subscription__max-text">1700</span>
+                    <span class="subscription__min-text">3700</span>
+                    <span class="subscription__max-text">3700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
                   <li class="subscription__item">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
-                    <span class="subscription__min-text">2700</span>
-                    <span class="subscription__max-text">2700</span>
+                    <span class="subscription__min-text">4700</span>
+                    <span class="subscription__max-text">4700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
                 </ul>
-              </div> -->
+              </div>
             </div>
           </div>
         </section>
@@ -350,9 +349,7 @@
                 </div>
               </div>
               <p class="games__text">Ежегодные соревнования по&nbsp;CrossFit</p>
-              <button class="btn" type="button" aria-label="Заполнить заявку">
-                Заполнить заявку
-              </button>
+              <a class="games__link btn" href="#"> Заполнить заявку </a>
             </div>
 
             <p class="games__picture">
@@ -681,6 +678,39 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__content">
+                    <div class="reviews__content-inner">
+                      <p class="reviews__content-picture">
+                        <picture>
+                          <source
+                            type="image/webp"
+                            srcset="img/avatar.webp 1x, img/avatar@2x.webp 2x"
+                          />
+
+                          <img
+                            src="img/avatar.jpg"
+                            srcset="img/avatar@2x.jpg"
+                            width="80"
+                            height="80"
+                            alt="Анна Орлова"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </p>
+
+                      <p class="reviews__content-name">Анна Орлова</p>
+
+                      <span>
+                        &laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится,
+                        что в&nbsp;клубе всегда чисто, тренажеры обновляют,
+                        персонал дружелюбный. Зал просторный, даже
+                        в&nbsp;вечернее время нет очередей&raquo;
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="reviews__slide swiper-slide">
                   <div class="reviews__content">
                     <div class="reviews__content-inner">

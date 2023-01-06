@@ -1,6 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import './modules/slider';
 import {findAllVideos} from './modules/video';
+import {showContent} from './modules/tabs';
+
+document.querySelector('html').classList.remove('no-js');
 
 // ---------------------------------
 
@@ -19,6 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     findAllVideos();
+    showContent();
+
+
   });
 });
 

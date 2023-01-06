@@ -1548,6 +1548,10 @@ button,
   padding: 0 103px;
 }
 
+.no-js .tabs__buttons {
+  display: none;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1849,7 +1853,7 @@ button,
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-image: url(../img/sprite/video-button.svg);
+  background-image: url("../img/sprite/video-button.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -1912,7 +1916,7 @@ button,
 }
 
 .subscription__content {
-  padding: 30px 0 120px;
+  padding: 30px 0 100px;
 }
 
 .subscription__list {
@@ -1922,7 +1926,7 @@ button,
   grid-template-columns: repeat(3, auto);
   gap: 42px;
   list-style: none;
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
 }
 
@@ -1939,16 +1943,13 @@ button,
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  padding: 62px 76px 68px;
+  padding: 56px 69px;
   min-height: 448px;
   max-width: 360px;
   min-width: 290px;
   z-index: 1;
   overflow-wrap: break-word;
-}
-
-.subscription__item a.focus-visible:focus {
-  outline-color: #102654;
+  border: 7px solid rgba(255, 255, 255, 0);
 }
 
 .subscription__item h4 {
@@ -1975,6 +1976,10 @@ button,
   width: 206px;
   cursor: pointer;
   color: #102654;
+}
+
+.subscription__item a.focus-visible:focus {
+  outline-color: #102654;
 }
 
 .subscription__min-text {
@@ -2038,6 +2043,7 @@ button,
 }
 
 .tabs__buttons button {
+  position: relative;
   font-size: 20px;
   line-height: 30px;
   padding: 0;
@@ -2059,7 +2065,6 @@ button,
 
 .tabs__buttons button.is-active {
   opacity: 1;
-  position: relative;
 }
 
 .tabs__buttons button.is-active::after {
@@ -2105,9 +2110,8 @@ button,
   color: #ffffff;
 }
 
-.games__content button {
+.games__content .games__link {
   width: 100%;
-  display: block;
   border: 4px solid #ffffff;
   padding: 25px 40px;
   font-size: 12px;
@@ -2115,6 +2119,7 @@ button,
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
 .games__text {
@@ -2223,6 +2228,9 @@ button,
 
 .cards__container img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .cards__description-container {
@@ -2567,9 +2575,9 @@ button,
   width: 100%;
   border: solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%);
+  border-image-source: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%) 1;
   border-width: 7px;
-  padding: 19px 28px 30px;
+  padding: 19px 28px 27px;
 }
 
 .discount__info-container p {
@@ -3090,12 +3098,12 @@ button,
 
   .subscription {
     padding-top: 101px;
-    margin-bottom: 99px;
+    margin-bottom: 102px;
   }
 
   .subscription::after {
     background-image: url("/img/barbells-tablet.webp");
-    bottom: -174px;
+    bottom: -177px;
     right: 0;
     width: 348px;
   }
@@ -3108,7 +3116,7 @@ button,
   }
 
   .subscription__content {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
   }
 
   .subscription__list {
@@ -3145,7 +3153,7 @@ button,
     width: 292px;
   }
 
-  .games__content button {
+  .games__content .games__link {
     width: 97%;
     border-width: 2px;
     padding: 12px 50px;
@@ -3207,7 +3215,7 @@ button,
 
   .cards__container img {
     width: 268px;
-    height: 294px;
+    max-height: 294px;
   }
 
   .cards__description-inner p {
@@ -3551,7 +3559,7 @@ button,
   }
 
   .subscription__content {
-    padding: 20px 0 70px;
+    padding: 20px 0 50px;
   }
 
   .subscription__list {
@@ -3559,12 +3567,8 @@ button,
   }
 
   .subscription__item {
-    padding: 48px 40px 48px;
+    padding: 41px 33px;
     min-height: 384px;
-  }
-
-  .subscription__item:hover {
-    padding: 41px 40px 41px;
   }
 
   .subscription__item h4 {
@@ -3603,6 +3607,10 @@ button,
   .tabs__buttons button {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .tabs__buttons button.is-active::after {
+    bottom: -14px;
   }
 
   .games {
@@ -3655,8 +3663,7 @@ button,
   }
 
   .cards__container img {
-    width: auto;
-    height: 274px;
+    min-height: 274px;
   }
 
   .cards__description-container {
@@ -3957,21 +3964,16 @@ button,
   }
 
   .subscription__item:hover:not(.focus-visible) {
-    border: solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%);
-    border-width: 7px;
-    padding: 55px 69px 59px;
+    -o-border-image: -o-linear-gradient(307.49deg, #d10a42 0, #0041ca 87.33%) 1;
+    border-image: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%) 1;
   }
 
   .subscription__item:hover:not(.focus-visible) a {
-    display: inline-block;
-    vertical-align: baseline;
+    border: none;
+    padding: 26px 44px;
     background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-    border: none;
     color: #ffffff;
-    padding: 26px 44px;
   }
 
   .tabs__buttons button:hover:not(.focus-visible) {

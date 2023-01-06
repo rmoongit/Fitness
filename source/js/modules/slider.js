@@ -4,13 +4,7 @@ const swiperCards = new Swiper('.cards__slider', {
   // Optional parameters
   modules: [Navigation],
   loop: true,
-  spaceBetween: 40,
-  grabCursor: true,
-
-  effect: 'cube',
-  cubeEffect: {
-    slideShadows: false,
-  },
+  grabCursor: false,
 
   // Responsive breakpoints
   breakpoints: {
@@ -21,11 +15,13 @@ const swiperCards = new Swiper('.cards__slider', {
     },
     // when window width is >= 768px
     767: {
+      grabCursor: true,
       slidesPerView: 2,
       spaceBetween: 30,
     },
     // when window width is >= 1366px
     1200: {
+      allowTouchMove: false,
       slidesPerView: 4,
       spaceBetween: 40,
     },
@@ -42,15 +38,8 @@ const swiperCards = new Swiper('.cards__slider', {
 const swiperReviews = new Swiper('.reviews__slider', {
   // Optional parameters
   modules: [Navigation],
-  loop: true,
   slidesPerView: 1,
-  spaceBetween: 40,
   grabCursor: true,
-
-  effect: 'cube',
-  cubeEffect: {
-    slideShadows: false,
-  },
 
   // Navigation arrows
   navigation: {

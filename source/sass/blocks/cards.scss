@@ -51,15 +51,16 @@
 
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     @include vp-1199 {
       width: 268px;
-      height: 294px;
+      max-height: 294px;
     }
 
     @include vp-767 {
-      width: auto;
-      height: 274px;
+      min-height: 274px;
     }
   }
 }
