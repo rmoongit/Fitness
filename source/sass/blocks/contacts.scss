@@ -16,7 +16,6 @@
   display: grid;
   max-width: 489px;
   grid-template-columns: 1fr 1fr;
-  color: $color-sapphire;
   gap: 0 90px;
 
   @include vp-1199 {

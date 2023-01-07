@@ -145,6 +145,7 @@
 }
 
 .benefits__promo {
+  position: relative;
   grid-column: 2;
   grid-row: 2 span;
   max-width: 240px;
@@ -153,12 +154,37 @@
   background-color: $color-resolution-blue;
   color: $color-default-white;
 
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 340px;
+    height: 2px;
+    background-color: $color-crimson;
+    opacity: 0.2;
+    top: 51%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    right: 129px;
+  }
+
+  &::after {
+    left: 471px;
+  }
+
   @include vp-1199 {
     max-width: 442px;
     margin: 42px auto 27px;
     padding: 16px 135px 38px;
     grid-column: 1/-1;
     grid-row: 2;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   @include vp-767 {

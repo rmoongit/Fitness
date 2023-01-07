@@ -5,7 +5,7 @@
     font-family: $ff-alumni;
     letter-spacing: 0.03em;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     font-size: 54px;
     line-height: 65px;
     font-weight: 600;
@@ -154,10 +154,8 @@
   min-height: 211px;
   max-width: 560px;
   width: 100%;
-  border: solid;
-  border-image-slice: 1;
-  border-image-source: $border-gradient;
-  border-width: 7px;
+  border: 7px solid;
+  border-image: $border-gradient;
   padding: 19px 28px 27px;
 
   @include vp-1199 {
