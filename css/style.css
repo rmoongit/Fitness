@@ -1883,13 +1883,60 @@ button,
 .subscription::after {
   content: "";
   position: absolute;
-  background-image: url("/img/barbells.webp");
   width: 290px;
   height: 495px;
   bottom: -151px;
   right: 0;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@supports (background-image: url("../img/barbells.webp")) {
+  .subscription::after {
+    background-image: url("../img/barbells.webp");
+  }
+
+@media (max-width: 1199px) {
+    .subscription::after {
+      background-image: url("../img/barbells-tablet.webp");
+    }
+}
+
+@media (max-width: 767px) {
+    .subscription::after {
+      background-image: url("../img/barbells-mobile.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .subscription::after {
+      background-image: url("../img/barbells@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px), (min-resolution: 1.5dppx) and (max-width: 1199px) {
+    .subscription::after {
+      background-image: url("../img/barbells-tablet@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px) {
+    .subscription::after {
+      background-image: url("../img/barbells-mobile@2x.webp");
+    }
+}
+}
+
+@supports not (background-image: url("../img/barbells.webp")) {
+  .subscription::after {
+    background-image: url("../img/barbells.jpg");
+  }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .subscription::after {
+      background-image: url("../img/barbells@2x.jpg");
+    }
+}
 }
 
 .subscription h3 {
@@ -2890,10 +2937,21 @@ button,
 }
 
 .contacts__content-left {
+  position: relative;
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 2;
   grid-row: 2;
+}
+
+.contacts__content-left::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 101px;
+  background-color: #74819c;
+  top: 7px;
+  right: -32px;
 }
 
 .contacts__content-right {
@@ -3155,7 +3213,6 @@ button,
   }
 
   .subscription::after {
-    background-image: url("/img/barbells-tablet.webp");
     bottom: -177px;
     right: 0;
     width: 348px;
@@ -3474,6 +3531,12 @@ button,
   .contacts__content dd {
     font-size: 18px;
     margin-bottom: 22px;
+  }
+
+  .contacts__content-left::after {
+    top: 8px;
+    right: -50px;
+    height: 128px;
   }
 
   .footer__wrapper {
@@ -3962,6 +4025,10 @@ button,
     font-size: 32px;
     line-height: 38px;
     margin-bottom: 36px;
+  }
+
+  .contacts__content-left::after {
+    display: none;
   }
 
   .contacts__content-right {
