@@ -9,7 +9,7 @@
   @supports (background-image: url("../img/#{$filename}.webp")) {
     background-image: url("../img/#{$filename}.webp");
 
-    @include vp-1023 {
+    @include vp-1199 {
       background-image: url("../img/#{$filename}-tablet.webp");
     }
 
@@ -20,7 +20,7 @@
     @include retina {
       background-image: url("../img/#{$filename}@2x.webp");
 
-      @include vp-1023 {
+      @include vp-1199 {
         background-image: url("../img/#{$filename}-tablet@2x.webp");
       }
 

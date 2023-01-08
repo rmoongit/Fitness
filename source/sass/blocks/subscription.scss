@@ -18,7 +18,6 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("/img/barbells.webp");
     width: 290px;
     height: 495px;
     bottom: -151px;
@@ -26,8 +25,9 @@
     background-size: contain;
     background-repeat: no-repeat;
 
+    @include background-image("barbells");
+
     @include vp-1199 {
-      background-image: url("/img/barbells-tablet.webp");
       bottom: -177px;
       right: 0;
       width: 348px;
