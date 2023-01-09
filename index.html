@@ -219,7 +219,7 @@
                 </picture>
               </a>
               <button
-                class="video__button"
+                class="video__button no-js"
                 type="button"
                 data-video-button
                 aria-label="Запустить видео"
@@ -232,7 +232,12 @@
           <h3>Абонементы</h3>
           <div class="subscription__wrapper container tabs">
             <div class="tabs__buttons no-js">
-              <button data-tab="1" type="button" aria-label="один месяц">
+              <button
+                class="is-active"
+                data-tab="1"
+                type="button"
+                aria-label="один месяц"
+              >
                 1 месяц
               </button>
               <button data-tab="2" type="button" aria-label="6 месяцев">
@@ -246,21 +251,21 @@
             <div class="subscription__content">
               <div class="subscription__content-wrapper" data-list="1">
                 <ul class="subscription__list">
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>С тренером</h4>
                     <p>12 занятий</p>
                     <span class="subscription__min-text">5000</span>
                     <span class="subscription__max-text">5000</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
                     <span class="subscription__min-text">1700</span>
                     <span class="subscription__max-text">1700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
                     <span class="subscription__min-text">2700</span>
@@ -272,21 +277,21 @@
 
               <div class="subscription__content-wrapper" data-list="2">
                 <ul class="subscription__list">
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>С тренером</h4>
                     <p>12 занятий</p>
                     <span class="subscription__min-text">7000</span>
                     <span class="subscription__max-text">7000</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
                     <span class="subscription__min-text">2700</span>
                     <span class="subscription__max-text">2700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
                     <span class="subscription__min-text">3700</span>
@@ -298,21 +303,21 @@
 
               <div class="subscription__content-wrapper" data-list="3">
                 <ul class="subscription__list">
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>С тренером</h4>
                     <p>12 занятий</p>
                     <span class="subscription__min-text">9000</span>
                     <span class="subscription__max-text">9000</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
                     <span class="subscription__min-text">3700</span>
                     <span class="subscription__max-text">3700</span>
                     <a class="btn" href="#!">купить абонемент</a>
                   </li>
-                  <li class="subscription__item">
+                  <li class="subscription__item" tabindex="0">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
                     <span class="subscription__min-text">4700</span>
@@ -330,7 +335,7 @@
             <div class="games__content">
               <div class="games__date">
                 <h4>SUPER<br />GAMES</h4>
-                <div class="games__time">
+                <div class="games__time-content">
                   <div class="games__time-inner">
                     <p>Дата</p>
                     <time
@@ -391,15 +396,15 @@
           <div class="cards__wrapper container">
             <button
               type="button"
-              class="cards__button-prev swiper-button-prev btn btn--slider"
-              aria-label="previous-slide"
+              class="cards__button-prev swiper-button-prev btn btn--slider no-js"
+              aria-label="кнопка назад"
             ></button>
             <h4>Тренеры</h4>
 
             <!-- slider block -->
             <div class="swiper cards__slider">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper no-js">
                 <!-- Slides -->
                 <div class="cards__slide swiper-slide">
                   <div class="cards__container">
@@ -482,7 +487,114 @@
                     </div>
                   </div>
                 </div>
+                <div class="cards__slide swiper-slide">
+                  <div class="cards__container">
+                    <picture>
+                      <img
+                        srcset="img/mariya.webp 1x, img/mariya@2x.webp 2x"
+                        src="img/mariya.jpg"
+                        width="260"
+                        height="294"
+                        alt="Мария Кетова"
+                        loading="lazy"
+                      />
+                    </picture>
 
+                    <div class="cards__description-container">
+                      <h5>Мария Кетова</h5>
+
+                      <div class="cards__description-inner">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Информация Марии</li>
+                          <li>Информация Марии</li>
+                          <li>Информация Марии</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__slide swiper-slide">
+                  <div class="cards__container">
+                    <picture>
+                      <img
+                        srcset="img/anna.webp 1x, img/anna@2x.webp 2x"
+                        src="img/anna.jpg"
+                        width="260"
+                        height="294"
+                        alt="Анна Павлова"
+                        loading="lazy"
+                      />
+                    </picture>
+
+                    <div class="cards__description-container">
+                      <h5>Анна Павлова</h5>
+
+                      <div class="cards__description-inner">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Информация Анны</li>
+                          <li>Информация Анны</li>
+                          <li>Информация Анны</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__slide swiper-slide">
+                  <div class="cards__container">
+                    <picture>
+                      <img
+                        srcset="img/alexey.webp 1x, img/alexey@2x.webp 2x"
+                        src="img/alexey.jpg"
+                        width="260"
+                        height="294"
+                        alt="Алексей Лавров"
+                        loading="lazy"
+                      />
+                    </picture>
+
+                    <div class="cards__description-container">
+                      <h5>Алексей Лавров</h5>
+
+                      <div class="cards__description-inner">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Информация Алексея</li>
+                          <li>Информация Алексея</li>
+                          <li>Информация Алексея</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__slide swiper-slide">
+                  <div class="cards__container">
+                    <picture>
+                      <img
+                        srcset="img/alexandr.webp 1x, img/alexandr@2x.webp 2x"
+                        src="img/alexandr.jpg"
+                        width="260"
+                        height="294"
+                        alt="Александр Пашков"
+                        loading="lazy"
+                      />
+                    </picture>
+
+                    <div class="cards__description-container">
+                      <h5>Александр Пашков</h5>
+
+                      <div class="cards__description-inner">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Certified Level&nbsp;3 Trainer</li>
+                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="cards__slide swiper-slide">
                   <div class="cards__container">
                     <picture>
@@ -511,13 +623,12 @@
                   </div>
                 </div>
               </div>
-
               <!-- If we need navigation buttons -->
             </div>
             <button
               type="button"
-              class="cards__button-next swiper-button-next btn btn--slider"
-              aria-label="next-slide"
+              class="cards__button-next swiper-button-next btn btn--slider no-js"
+              aria-label="кнопка вперёд"
             ></button>
           </div>
         </section>
@@ -668,7 +779,7 @@
           <div class="reviews__wrapper container">
             <button
               type="button"
-              class="reviews__button-prev swiper-button-prev btn btn--slider"
+              class="reviews__button-prev swiper-button-prev btn btn--slider no-js"
               aria-label="previous-slide"
             ></button>
             <h4>Отзывы</h4>
@@ -676,7 +787,7 @@
             <!-- slider -->
             <div class="swiper reviews__slider">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper no-js">
                 <!-- Slides -->
                 <div class="reviews__slide swiper-slide">
                   <div class="reviews__content">
@@ -749,7 +860,7 @@
 
             <button
               type="button"
-              class="reviews__button-next swiper-button-next btn btn--slider"
+              class="reviews__button-next swiper-button-next btn btn--slider no-js"
               aria-label="next-slide"
             ></button>
           </div>
