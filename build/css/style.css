@@ -1335,10 +1335,13 @@ body {
 }
 
 a {
-  outline-color: #ffffff;
-  outline-offset: 5px;
   color: #000000;
   text-decoration: none;
+}
+
+a.focus-visible:focus {
+  outline: 2px solid;
+  outline-offset: 3px;
 }
 
 img,
@@ -1464,8 +1467,8 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline-color: #ffffff;
-  outline-offset: 5px;
+  outline-color: #102654;
+  outline-offset: 2px;
 }
 
 .wrapper {
@@ -1552,6 +1555,27 @@ button,
   display: none;
 }
 
+.no-js .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.no-js .swiper-button-next,
+.no-js .swiper-button-prev {
+  display: none;
+}
+
+.no-js .video__button {
+  pointer-events: none;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1561,6 +1585,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   word-break: break-word;
+  outline-offset: 3px;
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -1583,10 +1608,17 @@ button,
   opacity: 0.8;
 }
 
+.btn.focus-visible:focus {
+  outline: 2px solid;
+}
+
 .btn--slider {
   padding: 0;
   color: #afafaf;
-  outline-offset: 3px;
+}
+
+.btn--slider.focus-visible:focus {
+  outline-offset: 2px;
   outline-color: #102654;
 }
 
@@ -1638,9 +1670,6 @@ button,
 
 .header__nav a.focus-visible:focus {
   opacity: 0.8;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .logo {
@@ -1829,12 +1858,16 @@ button,
   background-color: #000000;
 }
 
-.video.is-active {
-  cursor: pointer;
+.video.focus-visible:focus img,
+.video.focus-visible:focus .video__button {
+  opacity: 0.8;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.video.is-active .video__button {
-  display: block;
+.video.is-active {
+  cursor: pointer;
 }
 
 .video__media {
@@ -1861,15 +1894,11 @@ button,
   left: 50%;
   width: 100px;
   height: 100px;
-  display: none;
   cursor: pointer;
 }
 
 .video__button.focus-visible:focus {
-  opacity: 0.8;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
+  outline: 2px solid;
 }
 
 .subscription {
@@ -1999,6 +2028,20 @@ button,
   border: 7px solid rgba(255, 255, 255, 0);
 }
 
+.subscription__item.focus-visible:focus {
+  -o-border-image: -o-linear-gradient(307.49deg, #d10a42 0, #0041ca 87.33%) 1;
+  border-image: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%) 1;
+  outline: none;
+}
+
+.subscription__item.focus-visible:focus a {
+  border: none;
+  padding: 26px 44px;
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: #ffffff;
+}
+
 .subscription__item h4 {
   margin: 0;
   margin-bottom: 10px;
@@ -2086,6 +2129,9 @@ button,
   -webkit-column-gap: 46px;
   -moz-column-gap: 46px;
   column-gap: 46px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
@@ -2200,6 +2246,7 @@ button,
 
 .games__time-inner {
   margin-top: -6px;
+  width: 92px;
 }
 
 .games__time-inner p {
@@ -2244,6 +2291,7 @@ button,
 
 .games__picture {
   margin: 0;
+  background-color: #102654;
 }
 
 .cards h4 {
@@ -2271,11 +2319,13 @@ button,
 
 .cards__container {
   position: relative;
+  min-height: 294px;
+  background-color: #e8e8e8;
 }
 
 .cards__container img {
   width: 100%;
-  height: 100%;
+  min-height: 294px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2296,7 +2346,7 @@ button,
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 50px 40px 22px;
+  padding: 50px 30px 23px;
   background-color: none;
 }
 
@@ -2304,6 +2354,7 @@ button,
   margin: auto auto 0;
   color: #ffffff;
   font-size: 18px;
+  text-align: center;
 }
 
 .cards__description-container:hover,
@@ -2325,7 +2376,7 @@ button,
 
 .cards__description-container:hover h5,
 .cards__description-container:focus-within h5 {
-  margin: 4px 0 -4px 17px;
+  margin: 4px 0 -4px;
 }
 
 .cards__description-inner {
@@ -2343,7 +2394,7 @@ button,
 
 .cards__description-inner ul {
   margin: 0;
-  padding: 32px 0 0 30px;
+  padding: 32px 0 0 41px;
   list-style: none;
   color: #ffffff;
 }
@@ -2372,6 +2423,10 @@ button,
 
 .cards__slider {
   margin: 0;
+}
+
+.cards__slide {
+  width: 260px;
 }
 
 .cards__button-next,
@@ -2713,6 +2768,12 @@ button,
 
 .discount__picture {
   margin: 0;
+  background-color: #102654;
+}
+
+.discount__picture img {
+  height: 100%;
+  width: 100%;
 }
 
 .reviews__wrapper {
@@ -2862,6 +2923,14 @@ button,
   outline-offset: 3px;
 }
 
+.form__fields input.focus-visible:focus {
+  outline: 2px solid;
+}
+
+.form__fields input.focus-visible:focus {
+  opacity: 0.8;
+}
+
 .form__fields input::-webkit-input-placeholder {
   color: #ffffff;
 }
@@ -2992,12 +3061,13 @@ button,
   padding: 29px 45px;
 }
 
-.footer__logo {
-  margin-top: 12px;
+.footer__wrapper a.focus-visible:focus {
+  opacity: 0.8;
+  outline-color: #ffffff;
 }
 
-.footer__logo a.focus-visible:focus {
-  opacity: 0.8;
+.footer__logo {
+  margin-top: 12px;
 }
 
 .footer__links-list {
@@ -3021,10 +3091,6 @@ button,
   line-height: 16px;
 }
 
-.footer__links-list a.focus-visible:focus {
-  opacity: 0.8;
-}
-
 .footer__icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3036,10 +3102,6 @@ button,
 
 .footer__icons p {
   margin: 0;
-}
-
-.footer__icons p a.focus-visible:focus {
-  opacity: 0.8;
 }
 
 /* @mixin hover-focus {
@@ -3282,6 +3344,10 @@ button,
     padding-left: 7px;
   }
 
+  .games__time-inner {
+    max-width: 63px;
+  }
+
   .games__time-inner p {
     font-size: 12px;
   }
@@ -3328,6 +3394,11 @@ button,
     max-height: 294px;
   }
 
+  .cards__description-container {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+
   .cards__description-container h5 {
     padding-left: 6px;
   }
@@ -3335,11 +3406,15 @@ button,
   .cards__description-container:hover h5,
   .cards__description-container:focus-within h5 {
     margin-top: 3px;
-    padding-left: 0;
+    padding-right: 14px;
   }
 
   .cards__description-inner p {
     margin-left: -5px;
+  }
+
+  .cards__description-inner ul {
+    padding-left: 30px;
   }
 
   .cards__button-next {
@@ -3793,6 +3868,10 @@ button,
     padding: 0 46px 70px;
   }
 
+  .cards__container {
+    min-height: 274px;
+  }
+
   .cards__container img {
     min-height: 274px;
   }
@@ -3805,7 +3884,7 @@ button,
   .cards__description-container:focus-within h5 {
     margin-bottom: -5px;
     margin-top: 2px;
-    padding-left: 3px;
+    padding: 0;
   }
 
   .cards__button-next,
@@ -3922,10 +4001,6 @@ button,
   }
 
   .discount__picture {
-    width: 100%;
-  }
-
-  .discount__picture img {
     width: 100%;
   }
 
@@ -4091,14 +4166,17 @@ button,
     opacity: 0.8;
   }
 
-  .header__nav a:hover:not(.focus-visible) {
-    opacity: 0.8;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
+  .btn--slider:hover:not(.focus-visible) {
+    outline-offset: 2px;
+    outline-color: #102654;
   }
 
-  .video__button:hover:not(.focus-visible) {
+  .header__nav a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .video:hover:not(.focus-visible) img,
+  .video:hover:not(.focus-visible) .video__button {
     opacity: 0.8;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
@@ -4108,6 +4186,7 @@ button,
   .subscription__item:hover:not(.focus-visible) {
     -o-border-image: -o-linear-gradient(307.49deg, #d10a42 0, #0041ca 87.33%) 1;
     border-image: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%) 1;
+    outline: none;
   }
 
   .subscription__item:hover:not(.focus-visible) a {
@@ -4136,6 +4215,10 @@ button,
     transition: 0.3s ease;
   }
 
+  .form__fields input:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
   .contacts__content-right a:hover:not(.focus-visible) {
     opacity: 0.8;
     -webkit-transition: 0.3s ease;
@@ -4143,15 +4226,8 @@ button,
     transition: 0.3s ease;
   }
 
-  .footer__logo a:hover:not(.focus-visible) {
+  .footer__wrapper a:hover:not(.focus-visible) {
     opacity: 0.8;
-  }
-
-  .footer__links-list a:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-
-  .footer__icons p a:hover:not(.focus-visible) {
-    opacity: 0.8;
+    outline-color: #ffffff;
   }
 }

@@ -220,12 +220,14 @@
 
 .discount__picture {
   margin: 0;
+  background-color: $color-sapphire;
 
   @include vp-767 {
     width: 100%;
+  }
 
-    img {
-      width: 100%;
-    }
+  img {
+    height: 100%;
+    width: 100%;
   }
 }

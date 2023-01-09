@@ -48,10 +48,16 @@
 
 .cards__container {
   position: relative;
+  min-height: 294px;
+  background-color: $color-grey;
+
+  @include vp-767 {
+    min-height: 274px;
+  }
 
   img {
     width: 100%;
-    height: 100%;
+    min-height: 294px;
     object-fit: cover;
 
     @include vp-1199 {
@@ -74,8 +80,13 @@
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 50px 40px 22px;
+  padding: 50px 30px 23px;
   background-color: none;
+
+  @include vp-1199 {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
 
   @include vp-767 {
     padding: 41px 20px 48px;
@@ -85,6 +96,7 @@
     margin: auto auto 0;
     color: $color-default-white;
     font-size: 18px;
+    text-align: center;
 
     @include vp-1199 {
       padding-left: 6px;
@@ -103,17 +115,17 @@
     }
 
     h5 {
-      margin: 4px 0 -4px 17px;
+      margin: 4px 0 -4px;
 
       @include vp-1199 {
         margin-top: 3px;
-        padding-left: 0;
+        padding-right: 14px;
       }
 
       @include vp-767 {
         margin-bottom: -5px;
         margin-top: 2px;
-        padding-left: 3px;
+        padding: 0;
       }
     }
   }
@@ -135,9 +147,13 @@
 
   ul {
     margin: 0;
-    padding: 32px 0 0 30px;
+    padding: 32px 0 0 41px;
     list-style: none;
     color: $color-default-white;
+
+    @include vp-1199 {
+      padding-left: 30px;
+    }
 
     li {
       position: relative;
@@ -167,6 +183,10 @@
 
 .cards__slider {
   margin: 0;
+}
+
+.cards__slide {
+  width: 260px;
 }
 
 .cards__button-next,

@@ -46,7 +46,6 @@
 
     @include hover-focus {
       opacity: 0.8;
-      transition: $trans-default;
     }
 
     @include vp-1199 {

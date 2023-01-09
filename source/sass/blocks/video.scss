@@ -7,6 +7,14 @@
   transform: translate(-50%, -50%);
   background-color: $color-default-black;
 
+  @include hover-focus {
+    img,
+    .video__button {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+  }
+
   @include vp-1199 {
     top: 570px;
     width: 266px;
@@ -26,10 +34,6 @@
 
 .video.is-active {
   cursor: pointer;
-
-  .video__button {
-    display: block;
-  }
 }
 
 .video__media {
@@ -54,12 +58,10 @@
   left: 50%;
   width: 100px;
   height: 100px;
-  display: none;
   cursor: pointer;
 
-  @include hover-focus {
-    opacity: 0.8;
-    transition: $trans-default;
+  @include focus {
+    outline: 2px solid;
   }
 
   @include vp-1199 {

@@ -112,8 +112,9 @@
   overflow-wrap: break-word;
   border: 7px solid $color-transparent;
 
-  @include hover {
+  @include hover-focus {
     border-image: $border-gradient;
+    outline: none;
 
     a {
       border: none;

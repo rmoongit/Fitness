@@ -108,6 +108,11 @@
 
 .games__time-inner {
   margin-top: -6px;
+  width: 92px;
+
+  @include vp-1199 {
+    max-width: 63px;
+  }
 
   p {
     margin: 0;
@@ -177,6 +182,7 @@
 
 .games__picture {
   margin: 0;
+  background-color: $color-sapphire;
 
   @include vp-767 {
     width: 100%;

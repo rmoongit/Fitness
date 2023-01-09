@@ -38,10 +38,13 @@ body {
 }
 
 a {
-  outline-color: $color-default-white;
-  outline-offset: 5px;
   color: $color-default-black;
   text-decoration: none;
+
+  @include focus {
+    outline: 2px solid;
+    outline-offset: 3px;
+  }
 }
 
 img,
@@ -141,6 +144,6 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
-  outline-color: $color-default-white;
-  outline-offset: 5px;
+  outline-color: $color-sapphire;
+  outline-offset: 2px;
 }
