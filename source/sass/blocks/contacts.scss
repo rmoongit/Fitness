@@ -3,7 +3,7 @@
   padding: 56px 70px 45px 124px;
 
   @include vp-1199 {
-    padding: 62px 104px 42px 133px;
+    padding: 62px 104px 43px 133px;
   }
 
   @include vp-767 {
@@ -28,7 +28,7 @@
     max-width: 100%;
   }
 
-  h4 {
+  h3 {
     grid-row: 1;
     grid-column: 1/-1;
     font-family: $ff-alumni;

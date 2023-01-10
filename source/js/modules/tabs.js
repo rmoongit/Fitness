@@ -3,9 +3,8 @@ const lists = document.querySelectorAll('[data-list]');
 
 const showContent = () => {
 
-  lists.forEach((list) => {
-
-    if (list.dataset.list !== '1') {
+  lists.forEach((list, i) => {
+    if (i !== 0) {
       list.style.display = 'none';
     }
   });

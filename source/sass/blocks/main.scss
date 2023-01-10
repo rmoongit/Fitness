@@ -160,4 +160,12 @@
 
 .main__about-picture {
   margin: 0;
+
+  img {
+    object-fit: cover;
+
+    @include vp-1199 {
+      height: 390px;
+    }
+  }
 }
