@@ -1785,6 +1785,11 @@ button,
   margin: 0;
 }
 
+.main__about-picture img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .gym {
   min-height: 636px;
 }
@@ -1832,18 +1837,20 @@ button,
   font-weight: 300;
 }
 
-.gym__text p:nth-child(1) {
+.gym__text p:first-child {
   margin-bottom: 10px;
 }
 
 .gym__content-picture {
   margin: 0;
   background-color: #f8f9fc;
-  min-height: 345px;
+  height: auto;
 }
 
 .gym__content-picture img {
   width: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .video {
@@ -1968,7 +1975,7 @@ button,
 }
 }
 
-.subscription h3 {
+.subscription h2 {
   letter-spacing: 0.03em;
   font-family: "Alumni Sans", "Arial", sans-serif;
   text-align: center;
@@ -2233,7 +2240,7 @@ button,
   column-gap: 10px;
 }
 
-.games__date h4 {
+.games__date h3 {
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
   margin: 0;
@@ -2294,7 +2301,7 @@ button,
   background-color: #102654;
 }
 
-.cards h4 {
+.cards h2 {
   margin: 0;
   margin-bottom: 46px;
   grid-column: 1/-1;
@@ -2450,7 +2457,7 @@ button,
   background-color: #f8f9fc;
 }
 
-.benefits h4 {
+.benefits h2 {
   text-align: center;
   margin: 0;
   margin-left: 10px;
@@ -2585,7 +2592,7 @@ button,
   padding-bottom: 30px;
 }
 
-.discount h4 {
+.discount h2 {
   font-family: "Alumni Sans", "Arial", sans-serif;
   letter-spacing: 0.03em;
   margin: 0;
@@ -2623,8 +2630,6 @@ button,
 }
 
 .discount__promo-container {
-  color: #ffffff;
-  background-color: #ed0233;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2632,10 +2637,13 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 35px 45px 45px;
-  font-weight: 700;
-  max-width: 280px;
   width: 100%;
+  max-width: 280px;
+  min-height: 462px;
+  padding: 35px 45px 45px;
+  color: #ffffff;
+  background-color: #ed0233;
+  font-weight: 700;
 }
 
 .discount__promo-container span {
@@ -2773,7 +2781,8 @@ button,
 
 .discount__picture img {
   height: 100%;
-  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .reviews__wrapper {
@@ -2782,7 +2791,7 @@ button,
   position: relative;
 }
 
-.reviews__wrapper h4 {
+.reviews__wrapper h2 {
   margin: 0;
   margin-left: 8px;
   margin-bottom: 37px;
@@ -2885,7 +2894,7 @@ button,
   padding: 56px 170px 45px 103px;
 }
 
-.form h4 {
+.form h3 {
   font-family: "Alumni Sans", "Arial", sans-serif;
   margin: 0 0 17px;
   font-size: 54px;
@@ -2977,7 +2986,7 @@ button,
   gap: 0 90px;
 }
 
-.contacts__content h4 {
+.contacts__content h3 {
   -ms-grid-row: 1;
   grid-row: 1;
   grid-column: 1/-1;
@@ -3058,7 +3067,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 10px 100px;
-  padding: 29px 45px;
+  padding: 30px 45px;
 }
 
 .footer__wrapper a.focus-visible:focus {
@@ -3218,6 +3227,10 @@ button,
     margin-top: 32px;
   }
 
+  .main__about-picture img {
+    height: 390px;
+  }
+
   .gym {
     min-height: 754px;
   }
@@ -3249,12 +3262,16 @@ button,
     margin-top: 35px;
   }
 
-  .gym__text p:nth-child(1) {
+  .gym__text p:not(:first-child) {
+    display: none;
+  }
+
+  .gym__text p:first-child {
     margin-bottom: 42px;
   }
 
-  .gym__text p:nth-child(2) {
-    display: none;
+  .gym__content-picture img {
+    height: 345px;
   }
 
   .video {
@@ -3280,7 +3297,7 @@ button,
     width: 348px;
   }
 
-  .subscription h3 {
+  .subscription h2 {
     font-size: 42px;
     line-height: 50px;
     padding-right: 13px;
@@ -3322,6 +3339,7 @@ button,
 
   .games__content {
     padding: 51px 38px 50px 45px;
+    min-height: 292px;
     width: 292px;
   }
 
@@ -3338,7 +3356,7 @@ button,
     margin-bottom: 30px;
   }
 
-  .games__date h4 {
+  .games__date h3 {
     font-size: 48px;
     line-height: 46px;
     padding-left: 7px;
@@ -3372,11 +3390,15 @@ button,
     margin-bottom: 0;
   }
 
+  .games__picture {
+    max-width: 386px;
+  }
+
   .cards {
     min-height: 423px;
   }
 
-  .cards h4 {
+  .cards h2 {
     text-align: center;
     margin-right: 5px;
     margin-bottom: 32px;
@@ -3432,7 +3454,7 @@ button,
     margin-bottom: 86px;
   }
 
-  .benefits h4 {
+  .benefits h2 {
     font-size: 42px;
     line-height: 50px;
     margin-right: 32px;
@@ -3492,7 +3514,7 @@ button,
     margin-bottom: 14px;
   }
 
-  .discount h4 {
+  .discount h2 {
     font-size: 42px;
     margin-right: 8px;
     margin-bottom: 31px;
@@ -3525,12 +3547,17 @@ button,
     bottom: -2px;
   }
 
-  .reviews__wrapper {
-    max-width: 657px;
-    padding: 62px 45px 100px;
+  .discount__picture img {
+    min-width: 399px;
+    height: 462px;
   }
 
-  .reviews__wrapper h4 {
+  .reviews__wrapper {
+    max-width: 657px;
+    padding: 60px 45px 100px;
+  }
+
+  .reviews__wrapper h2 {
     margin-bottom: 40px;
     margin-left: 0;
     font-size: 42px;
@@ -3565,7 +3592,7 @@ button,
     padding: 62px 162px 45px 133px;
   }
 
-  .form h4 {
+  .form h3 {
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 28px;
@@ -3582,7 +3609,7 @@ button,
   }
 
   .contacts {
-    padding: 62px 104px 42px 133px;
+    padding: 62px 104px 43px 133px;
   }
 
   .contacts__content {
@@ -3590,7 +3617,7 @@ button,
     gap: 0 96px;
   }
 
-  .contacts__content h4 {
+  .contacts__content h3 {
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 32px;
@@ -3730,12 +3757,12 @@ button,
     padding-right: 30px;
   }
 
-  .gym__text p:nth-child(1) {
+  .gym__text p:first-child {
     margin-bottom: 33px;
   }
 
-  .gym__content-picture {
-    min-height: 313px;
+  .gym__content-picture img {
+    height: 313px;
   }
 
   .video {
@@ -3758,7 +3785,7 @@ button,
     display: none;
   }
 
-  .subscription h3 {
+  .subscription h2 {
     font-size: 32px;
     line-height: 38px;
     padding-right: 10px;
@@ -3841,7 +3868,7 @@ button,
     margin-left: 3px;
   }
 
-  .games__date h4 {
+  .games__date h3 {
     padding-left: 8px;
   }
 
@@ -3850,14 +3877,15 @@ button,
   }
 
   .games__picture {
-    width: 100%;
+    max-width: 100%;
+    min-height: auto;
   }
 
   .games__picture img {
-    width: 100%;
+    min-height: 292px;
   }
 
-  .cards h4 {
+  .cards h2 {
     font-size: 32px;
     line-height: 38px;
     margin-bottom: 40px;
@@ -3907,7 +3935,7 @@ button,
     margin-bottom: 64px;
   }
 
-  .benefits h4 {
+  .benefits h2 {
     font-size: 32px;
     line-height: 38px;
     margin-right: 27px;
@@ -3957,7 +3985,7 @@ button,
     margin: -7px 0 7px;
   }
 
-  .discount h4 {
+  .discount h2 {
     font-size: 32px;
     line-height: 38px;
     margin-bottom: 42px;
@@ -3974,6 +4002,7 @@ button,
 
   .discount__promo-container {
     max-width: 100%;
+    min-height: 299px;
     padding-bottom: 45px;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4004,12 +4033,19 @@ button,
     width: 100%;
   }
 
+  .discount__picture img {
+    min-width: 100%;
+    height: 299px;
+    -o-object-fit: fill;
+    object-fit: fill;
+  }
+
   .reviews__wrapper {
     max-width: 100%;
     padding: 33px 47px 70px;
   }
 
-  .reviews__wrapper h4 {
+  .reviews__wrapper h2 {
     margin-bottom: 42px;
     font-size: 32px;
     line-height: 38px;
@@ -4068,7 +4104,7 @@ button,
     min-height: 386px;
   }
 
-  .form h4 {
+  .form h3 {
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.02em;
@@ -4096,7 +4132,7 @@ button,
     max-width: 100%;
   }
 
-  .contacts__content h4 {
+  .contacts__content h3 {
     font-size: 32px;
     line-height: 38px;
     margin-bottom: 36px;
@@ -4115,7 +4151,7 @@ button,
 
   .footer__wrapper {
     position: relative;
-    padding: 45px 15px 52px;
+    padding: 45px 15px 46px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: start;
