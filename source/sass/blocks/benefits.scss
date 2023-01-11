@@ -49,7 +49,7 @@
 
   @include vp-1199 {
     max-width: 768px;
-    padding: 0 45px 91px;
+    padding: 0 45px 71px;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 31px;
   }
@@ -71,15 +71,17 @@
 
   @include vp-1199 {
     grid-column: 2;
+    margin-bottom: 20px;
   }
 
   @include vp-767 {
+    grid-column: 1/-1;
     max-width: 460px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 0;
     padding: 0 46px 20px;
     text-align: center;
-    grid-column: 1/-1;
   }
 
   &--left {
@@ -176,7 +178,7 @@
 
   @include vp-1199 {
     max-width: 442px;
-    margin: 42px auto 27px;
+    margin: 22px auto 27px;
     padding: 16px 135px 38px;
     grid-column: 1/-1;
     grid-row: 2;
