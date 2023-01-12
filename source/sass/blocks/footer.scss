@@ -101,6 +101,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px 11px;
+  min-width: 100px;
+  max-width: 100px;
 
   @include vp-767 {
     margin-top: 26px;

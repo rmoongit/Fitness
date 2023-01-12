@@ -1844,13 +1844,13 @@ button,
 .gym__content-picture {
   margin: 0;
   background-color: #f8f9fc;
-  height: auto;
+  max-height: 401px;
 }
 
 .gym__content-picture img {
   width: 100%;
-  -o-object-fit: fill;
-  object-fit: fill;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .video {
@@ -2133,9 +2133,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0 0 10px 0;
-  -webkit-column-gap: 46px;
-  -moz-column-gap: 46px;
-  column-gap: 46px;
+  gap: 25px 46px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -2204,6 +2202,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-width: 450px;
   width: 500px;
   min-height: 500px;
   padding: 85px 77px 85px;
@@ -2356,6 +2355,7 @@ button,
   width: 100%;
   padding: 50px 30px 23px;
   background-color: none;
+  overflow-y: auto;
 }
 
 .cards__description-container h5 {
@@ -2366,12 +2366,14 @@ button,
 }
 
 .cards__description-container:hover,
+.cards__description-container:focus,
 .cards__description-container:focus-within {
   background-color: #102654;
   opacity: 0.89;
 }
 
 .cards__description-container:hover .cards__description-inner,
+.cards__description-container:focus .cards__description-inner,
 .cards__description-container:focus-within .cards__description-inner {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -2383,6 +2385,7 @@ button,
 }
 
 .cards__description-container:hover h5,
+.cards__description-container:focus h5,
 .cards__description-container:focus-within h5 {
   margin: 4px 0 -4px;
 }
@@ -2803,8 +2806,11 @@ button,
   text-align: center;
 }
 
-.reviews__content {
+.reviews__slider {
   background-color: #1c3374;
+}
+
+.reviews__content {
   color: #ffffff;
   min-height: 242px;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
@@ -3010,6 +3016,16 @@ button,
 }
 
 .contacts__content dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 16px;
@@ -3108,6 +3124,8 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 5px 11px;
+  min-width: 100px;
+  max-width: 100px;
 }
 
 .footer__icons p {
@@ -3342,6 +3360,7 @@ button,
     padding: 51px 38px 50px 45px;
     min-height: 292px;
     width: 292px;
+    min-width: auto;
   }
 
   .games__content .games__link {
@@ -3427,6 +3446,7 @@ button,
   }
 
   .cards__description-container:hover h5,
+  .cards__description-container:focus h5,
   .cards__description-container:focus-within h5 {
     margin-top: 3px;
     padding-right: 14px;
@@ -3894,16 +3914,18 @@ button,
   }
 
   .cards__wrapper {
-    max-width: 319px;
+    max-width: 500px;
     padding: 0 46px 70px;
   }
 
   .cards__container {
-    min-height: 274px;
+    min-height: auto;
   }
 
   .cards__container img {
     min-height: 274px;
+    max-height: 100vw;
+    width: 100%;
   }
 
   .cards__description-container {
@@ -3911,6 +3933,7 @@ button,
   }
 
   .cards__description-container:hover h5,
+  .cards__description-container:focus h5,
   .cards__description-container:focus-within h5 {
     margin-bottom: -5px;
     margin-top: 2px;
@@ -4038,9 +4061,8 @@ button,
 
   .discount__picture img {
     min-width: 100%;
-    height: 299px;
-    -o-object-fit: fill;
-    object-fit: fill;
+    max-height: 500px;
+    height: calc(100vw - 21px);
   }
 
   .reviews__wrapper {

@@ -239,8 +239,8 @@
 
     @include vp-767 {
       min-width: 100%;
-      height: 299px;
-      object-fit: fill;
+      max-height: 500px;
+      height: calc(100vw - 21px);
     }
   }
 }

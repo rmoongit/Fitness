@@ -120,11 +120,11 @@
 .gym__content-picture {
   margin: 0;
   background-color: $color-ghost-white;
-  height: auto;
+  max-height: 401px;
 
   img {
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
 
     @include vp-1199 {
       height: 345px;

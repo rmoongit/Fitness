@@ -38,8 +38,11 @@
   }
 }
 
-.reviews__content {
+.reviews__slider {
   background-color: $color-resolution-blue;
+}
+
+.reviews__content {
   color: $color-default-white;
   min-height: 242px;
   box-shadow: $box-shadow;

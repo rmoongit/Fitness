@@ -28,6 +28,7 @@
 .games__content {
   display: flex;
   flex-direction: column;
+  min-width: 450px;
   width: 500px;
   min-height: 500px;
   padding: 85px 77px 85px;
@@ -38,6 +39,7 @@
     padding: 51px 38px 50px 45px;
     min-height: 292px;
     width: 292px;
+    min-width: auto;
   }
 
   @include vp-767 {

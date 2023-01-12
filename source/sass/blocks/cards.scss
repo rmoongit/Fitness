@@ -41,7 +41,7 @@
   }
 
   @include vp-767 {
-    max-width: 319px;
+    max-width: 500px;
     padding: 0 46px 70px;
   }
 }
@@ -52,7 +52,7 @@
   background-color: $color-grey;
 
   @include vp-767 {
-    min-height: 274px;
+    min-height: auto;
   }
 
   img {
@@ -67,6 +67,8 @@
 
     @include vp-767 {
       min-height: 274px;
+      max-height: 100vw;
+      width: 100%;
     }
   }
 }
@@ -82,6 +84,7 @@
   width: 100%;
   padding: 50px 30px 23px;
   background-color: none;
+  overflow-y: auto;
 
   @include vp-1199 {
     padding-left: 41px;
@@ -104,6 +107,7 @@
   }
 
   &:hover,
+  &:focus,
   &:focus-within {
     background-color: $color-sapphire;
     opacity: 0.89;
